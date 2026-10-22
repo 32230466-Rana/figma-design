@@ -98,23 +98,11 @@ body {
 .community-decoration--floating-one {
     top: 7%;
     left: 66%;
-    animation: community-shape-float 6s ease-in-out -3s infinite;
 }
 
 .community-decoration--floating-two {
     top: 48%;
     left: 73%;
-    animation: community-shape-float 6s ease-in-out infinite;
-}
-
-@keyframes community-shape-float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 .community-layout,
@@ -122,13 +110,6 @@ body {
 .mobile-community-visual {
     position: relative;
     z-index: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .community-decoration--floating-one,
-    .community-decoration--floating-two {
-        animation: none;
-    }
 }
 
 /* White curve */
@@ -2109,6 +2090,78 @@ body {
         left: auto;
         right: 3%;
         transform: none;
+    }
+}
+
+/* Keep the hero artwork out of phone layouts; float it on tablets and desktop. */
+@media (max-width: 767.98px) {
+    .hero .hero-laptop {
+        display: none;
+        animation: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero .hero-laptop {
+        animation: hero-laptop-float 5s ease-in-out infinite;
+        will-change: translate;
+    }
+}
+
+@keyframes hero-laptop-float {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .hero-laptop {
+        animation: none;
+        will-change: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .community-decorations {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .community-decorations {
+        display: block;
+    }
+
+    .community-decoration--floating-one {
+        animation: community-decoration-float 5s ease-in-out -2.5s infinite;
+        will-change: transform;
+    }
+
+    .community-decoration--floating-two {
+        animation: community-decoration-float 5s ease-in-out infinite;
+        will-change: transform;
+    }
+}
+
+@keyframes community-decoration-float {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -15px, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .community-decoration--floating-one,
+    .community-decoration--floating-two {
+        animation: none;
+        will-change: auto;
     }
 }
 
