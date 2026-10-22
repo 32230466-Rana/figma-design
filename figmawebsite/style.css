@@ -2122,13 +2122,24 @@ body {
     }
 
     .community-decoration--floating-one {
-        animation: community-decoration-float 5s ease-in-out -2.5s infinite;
+        animation: community-decoration-sway 18s ease-in-out infinite;
         will-change: transform;
     }
 
     .community-decoration--floating-two {
         animation: community-decoration-float 5s ease-in-out infinite;
         will-change: transform;
+    }
+}
+
+@keyframes community-decoration-sway {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        /* Travel from the Community's right side toward its left edge, then return. */
+        transform: translate3d(-66vw, 0, 0);
     }
 }
 
@@ -2149,4 +2160,5 @@ body {
         will-change: auto;
     }
 }
+
 
