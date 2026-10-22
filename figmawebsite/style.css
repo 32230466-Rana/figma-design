@@ -72,7 +72,6 @@ body {
 .community-section {
     position: relative;
     background-color: #f7f2fa;
-    /* Keep the Community content closer to the section above on desktop. */
     padding: 90px 0 15px;
     overflow: hidden;
     isolation: isolate;
@@ -344,7 +343,6 @@ body {
     gap: 10px;
 }
 
-/* Keep the last feature close to the testimonial artwork, as in the Figma layout. */
 .features-section {
     padding-bottom: 0;
 }
@@ -361,7 +359,6 @@ body {
     display: none;
 }
 
-/* Bootstrap collapse remains the single menu system on phones and tablets. */
 @media (max-width: 1023.98px) {
     .community-section {
         padding: 64px 0 55px;
@@ -418,7 +415,6 @@ body {
         box-shadow: 0 14px 32px rgba(12, 8, 36, 0.24);
     }
 
-    /* Undo navbar-expand-lg's desktop display rule through the tablet width. */
     .navbar-expand-lg .navbar-collapse {
         display: none !important;
     }
@@ -496,7 +492,6 @@ body {
     }
 }
 
-/* Testimonials, CTA, and footer */
 .testimonials-section {
     position: relative;
     isolation: isolate;
@@ -609,7 +604,6 @@ body {
     z-index: 3;
     display: block;
     object-fit: contain;
-    /* The supplied portraits already include the white circular frame and shadow. */
 }
 
 .testimonials-avatars .avatar.avatar-1 {
@@ -961,7 +955,6 @@ body {
         white-space: normal;
     }
 
-    /* Figma omits the CTA card on phones; remove its reserved overlap too. */
     .cta-wrapper {
         display: none;
     }
@@ -1151,7 +1144,6 @@ body {
     }
 }
 
-/* Phone layout follows the narrow Figma artboard: hero, showcase, then stacked features. */
 @media (max-width: 575.98px) {
     img {
         max-width: 100%;
@@ -1161,8 +1153,6 @@ body {
         width: 100%;
         height: 386px;
         overflow: hidden;
-        /* Keep the Figma gradient full-bleed on phones; the source artwork's
-           transparent angled lower edge is only used on the desktop layout. */
         background-image: radial-gradient(
                 ellipse 58% 42% at 80% 0%,
                 rgba(24, 54, 126, 0.78),
@@ -1301,8 +1291,6 @@ body {
         width: 100%;
         height: auto;
         margin-inline: auto;
-        /* Group 438 has a wide transparent margin on its left. Shift the file
-           slightly left so the visible laptop/monitor artwork is centered. */
         transform: translateX(-7%);
     }
 
@@ -1353,8 +1341,6 @@ body {
     }
 
     .features-section {
-        /* Replace the global container offset and old negative-margin
-           compensation with explicit section spacing at the phone width. */
         padding: 60px 0 70px;
     }
     .features-section > .container {
@@ -1420,7 +1406,6 @@ body {
         margin-bottom: 0;
     }
 
-    /* Match the first two mobile feature cards to the Figma phone artboard. */
     .features-section .feature-row:nth-child(1) {
         gap: 22px;
         margin-bottom: 25px;
@@ -1436,14 +1421,10 @@ body {
     }
     .features-section .feature-row:nth-child(1) .tablet-image {
         width: min(60%, 230px);
-        /* The PNG already includes its shadow and has nearly full-canvas
-           artwork; center the complete image and mirror its lean to match Figma. */
         transform: scaleX(-1);
     }
 
     .features-section .feature-row:nth-child(2) .people-image {
-        /* The portrait group has transparent side padding; offset its 3px
-           alpha-bound imbalance while sizing the visible cluster to Figma. */
         width: min(81%, 288px);
         margin-inline: auto;
         transform: translateX(-2px);
@@ -1598,9 +1579,7 @@ body {
     }
 }
 
-/* Use the supplied full-page artwork as the desktop page backdrop only. */
 @media (min-width: 1024px) {
-    /* Reduce the blank space before the desktop Community content. */
     .community-section {
         padding-top: 20px;
     }
@@ -1609,7 +1588,6 @@ body {
         padding-top: 125px;
     }
 
-    /* Close the oversized gap after the Community logos without moving the cards. */
     .features-section {
         margin-top: -280px;
     }
@@ -1651,7 +1629,6 @@ body {
     }
 }
 
-/* Bring the first feature's copy closer to its image on desktop only. */
 @media (min-width: 1200px) {
     .features-section .feature-row:first-child .feature-text {
         transform: translateX(80px);
@@ -1816,8 +1793,6 @@ body {
     }
 }
 
-/* iPad and tablet layouts. Phone rules (<=767px) and desktop rules (>=1200px)
-   retain their existing styles. */
 @media (min-width: 768px) and (max-width: 1199.98px) {
     body {
         background-image: none;
@@ -2103,7 +2078,7 @@ body {
     }
 }
 
-/* Keep the hero artwork out of phone layouts; float it on tablets and desktop. */
+/* Keep the hero artwork out of phone layouts float it on tablets and desktop. */
 @media (max-width: 767.98px) {
     .hero .hero-laptop {
         display: none;
