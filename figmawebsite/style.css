@@ -1571,6 +1571,9 @@ body {
         font-size: 13px;
         line-height: 1.5;
     }
+    .footer-brand p br {
+        display: none;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1645,6 +1648,13 @@ body {
 
     .footer-section {
         background: transparent;
+    }
+}
+
+/* Bring the first feature's copy closer to its image on desktop only. */
+@media (min-width: 1200px) {
+    .features-section .feature-row:first-child .feature-text {
+        transform: translateX(80px);
     }
 }
 
